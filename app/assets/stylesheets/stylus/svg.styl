@@ -1,0 +1,50 @@
+// main: _main.styl
+
+.svg-container
+  &.item
+    height 100%
+    width 100%
+    &:hover
+      transform scale(1.1)
+  &.nav
+    height 24px
+    width @height
+    margin-right 10px
+    vertical-align bottom
+  &.play-pause:hover
+    transform scale(1.1)
+
+.svg
+  width 100%
+  stroke $light-transparent
+  fill rgba(0,0,0,0)
+  stroke-width 6
+  transition 0s
+  &.item path
+    fill $white
+  &.player, &.play-pause
+    width 100%
+    stroke $light-transparent
+    & path, & rect
+      fill $light-transparent
+    &:hover
+      stroke $white
+      & path, & rect
+        fill $white
+  &.arrows
+    width 100%
+    stroke $light-transparent
+    & path.arrow
+      fill $light-transparent
+    &.green
+      stroke $green
+      & path.arrow
+        fill $green
+    &:hover
+      stroke $white
+      & path.arrow
+        fill $white
+      &.green
+        stroke $hover-green
+        & path.arrow
+          fill $hover-green

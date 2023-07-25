@@ -1,0 +1,55 @@
+// main: _main.styl
+
+.artist-show
+  padding 100px 20px 20px
+  background-color $black
+  min-height 100vh
+
+.artist-background
+  position absolute
+  top 0
+  left 0
+  right 0
+  height 360px
+  background-color rgba(0,0,0,0.3)
+  overflow hidden
+  & img
+    width 100%
+  &::after
+    content ""
+    position absolute
+    top 0
+    left 0
+    right 0
+    bottom 0
+    background linear-gradient(transparent -100%, $black);
+
+.artist-header
+  margin-bottom 60px
+  padding 0 40px
+  text-align center
+  & h1
+    font-size 72px
+    line-height 82px
+    font-weight 500
+    margin-bottom 20px
+
+.artist-button-container
+  margin-bottom 20px
+  & .button
+    margin 0 10px
+
+.artist-section
+  padding 20px
+  & h2
+    font-size 36px
+    line-height 48px
+    margin-bottom 20px
+    text-align center
+  & .flex-parent
+    justify-content space-around
+    justify-content space-evenly
+
+.artist-desc
+  padding 20px
+  background-color rgba(255,255,255,0.12)

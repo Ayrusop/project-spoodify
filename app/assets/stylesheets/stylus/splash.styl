@@ -1,0 +1,65 @@
+// main: _main.styl
+
+.hero-container
+  height 100vh
+  background-color #f037a5
+  background linear-gradient(#f037a5 -60%,#fae62d 140%)
+  color $white
+  overflow hidden
+  transition 0s
+  & h4
+    margin-bottom 30px
+
+.hero-background-svg
+  height 1610px
+  width 1523px
+
+.splash-pop-text
+  font-size 80px
+  line-height 88px
+  margin-bottom 20px
+
+.splash-footer
+  padding 80px 0 50px
+  & .gutter-container
+    padding 0 80px
+
+.nav-bar
+  z-index 10
+  position fixed
+  top 0
+  left 0
+  right 0
+  height 80px
+  line-height @height
+  background-color rgba(0,0,0,0.6)
+  color $white
+  & .logo
+    line-height @height
+    & a
+      padding 25px 0
+  & .gutter-container
+    display flex
+    justify-content space-between
+
+.nav-links a
+  font-weight 500
+  padding 31px 17px
+
+.links-container
+  margin 0 40px
+  & h4
+    color $grey
+    text-transform uppercase
+    font-weight 700
+    font-size 12px
+    letter-spacing 2px
+    margin 20px 0
+
+.footer-links li
+  margin 20px 0
+
+.copyright
+  text-align right
+  color $grey
+  font-size 12px

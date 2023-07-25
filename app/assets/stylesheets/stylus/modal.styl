@@ -1,0 +1,88 @@
+// main: _main.styl
+
+.modal
+  z-index 100
+  position fixed
+  top 0
+  left 0
+  right 0
+  bottom 0
+  background-color rgba(0,0,0,0.88)
+  text-align center
+  color $white
+  &.hidden
+    z-index -1
+    opacity 0
+    pointer-events none
+
+.modal-content-container
+  position absolute
+  top 45%
+  left 0
+  right 0
+  transform translateY(-50%)
+
+.modal-header
+  margin 20px
+  font-size 48px
+  letter-spacing 1px
+
+.modal-input-container
+  padding 30px 30px 20px
+  background-color $dark-grey
+  margin-bottom 20px
+  text-align left
+  & p
+    margin-bottom 10px
+    font-size 12px
+
+.modal-input
+  font-size 48px
+  line-height 56px
+  background-color $dark-grey
+  color $white
+  border none
+  font-weight 500
+  letter-spacing -1px
+  padding 0
+  caret-color $green
+  &::placeholder
+    color $placeholder-grey
+  &:focus
+    border none
+    &::placeholder
+      color $placeholder-grey
+
+.modal-button-container > *
+  margin 10px
+
+.create-modal-button
+  position absolute
+  top 50%
+  right 0
+  transform translateY(-50%)
+
+.playlist-select .create-modal-button
+  position relative
+  top none
+  right none
+  transform none
+  margin 20px
+
+.close-svg
+  height 54px
+  width @height
+  margin 0 auto
+  & .svg
+    stroke #a9a9a9
+  &:hover
+    transform scale(1.06)
+    & .svg
+      stroke $white
+
+@media screen and (max-width: 1240px)
+  .create-modal-button
+    position relative
+    top none
+    right none
+    transform none

@@ -1,0 +1,181 @@
+// main: _main.styl
+
+.main-background
+  z-index -1
+  position fixed
+  top 0
+  left 0
+  right 0
+  bottom 0
+  animation none
+  background-color $black
+  &.blue
+    background-image linear-gradient(#3c3e5d, #060609 85%)
+  &.green
+    background-image linear-gradient(#719702, #0b0f00 85%)
+  &.grey
+    background-image linear-gradient(#445546, #070807 85%)
+  &.red
+    background-image linear-gradient(#683138, #0a0506 85%)
+  &.purple
+    background-image linear-gradient(#30202d, #090609 85%)
+  &.royal
+    background-image linear-gradient(#322772, #05040b 85%)
+  &.mid
+    background-image linear-gradient(#4d4752, #080708 85%)
+  &.black
+    background-color $black
+  &.darker
+    background-color $dark-black
+
+.main-content-container
+  min-height 100vh
+  padding 0 0 100px 220px
+  color $white
+  & *
+    animation fadeIn 0.4s ease-in-out
+
+@keyframes fadeIn
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+
+.content-nav
+  margin 0 20px 20px
+  text-align center
+  font-size 12px
+  text-transform uppercase
+  letter-spacing 2px
+  & li
+    margin 0 20px
+    & a
+      padding 6px 0
+      margin 10px 0
+      &.active
+        color $white
+        &::before
+          content ""
+          position absolute
+          left 50%
+          transform translateX(-50%)
+          bottom 0
+          height 2px
+          width 30px
+          background-color $green
+
+.content-nav-list
+  margin-bottom 10px
+
+.index-item
+  width 16.666%
+@media screen and (max-width: 1800px)
+  .index-item
+    width 20%
+@media screen and (max-width: 1400px)
+  .index-item
+    width 25%
+@media screen and (max-width: 1160px)
+  .index-item
+    width 33.3333%
+@media screen and (max-width: 920px)
+  .index-item
+    width 50%
+@media screen and (max-width: 720px)
+  .index-item
+    width 100%
+
+.content-item
+  margin 10px auto 20px
+  width 100%
+  max-width 200px
+  text-align center
+  & .content-img
+    width 100%
+  & .img-container
+    margin-bottom 10px
+    min-height 200px
+    background-color rgba(0,0,0,0.3)
+    box-shadow 0 0 10px rgba(0,0,0,0.3)
+    overflow hidden
+    &::after
+      content ""
+      position absolute
+      top 0
+      left 0
+      right 0
+      bottom 0
+      transition 0.2s ease-in-out
+    & .content-play
+      opacity 0
+      display none
+      pointer-events none
+      text-align center
+      width 50%
+      overflow hidden
+      border-radius 100%
+    &:hover
+      & .content-play
+        z-index 3
+        opacity 1
+        display block
+        pointer-events all
+      &::after
+        background-color rgba(0,0,0,0.85)
+  & .content-primary-text, & .content-secondary-text
+    font-size 14px
+    font-weight 300
+    & a:hover
+      color $white
+  & .content-primary-text
+    color $white
+  &.artist .content-img,
+  &.artist .img-container,
+  &.artist .img-container::after
+    border-radius 100%
+
+.playlist-img
+  padding-top 100%
+  background-color #f037a5
+  background linear-gradient(#f037a5 -60%,#fae62d 140%)
+  &::before
+    content ""
+    position absolute
+    top 50%
+    left 50%
+    transform translate(-50%,-50%)
+    height 60%
+    width 60%
+    background-color #fae62d
+    background linear-gradient(#fae62d -60%,#f037a5 140%)
+    border-radius 100%
+  & .playlist-title
+    padding 10px
+    text-transform uppercase
+    letter-spacing 3px
+    font-size 14px
+    border 2px solid
+    color $white
+    width 85%
+
+.content-secondary-text
+  color $light-transparent
+
+.browse-container, .collection-container
+  padding 20px
+
+.playlist-select
+  & .flex-parent
+    justify-content space-around
+    justify-content space-evenly
+
+.playlist-select
+  padding 0 40px
+  max-height 400px
+  overflow-y auto
+  &::-webkit-scrollbar
+    width 8px
+    background-color transparent
+  &::-webkit-scrollbar-track
+    background-color rgba(255,255,255,0.1)
+  &::-webkit-scrollbar-thumb
+    background-color $light-transparent
+    border-radius 8px
