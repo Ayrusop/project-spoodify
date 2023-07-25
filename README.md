@@ -43,7 +43,7 @@ A core feature for any music app, the audio player is a top-level component for 
 
 ## Tech Stack of this Project
 
-* Frontend: Html, Css, JavaScript, Bootstrap
+* Frontend: Html, JavaScript, Bootstrap
 * Backend: Nodejs, Ruby
 * Framework: Expressjs
 * Database: MongoDB
